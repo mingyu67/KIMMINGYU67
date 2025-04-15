@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>DNA 해독 챌린지</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>🧬 DNA 해독 챌린지</h1>
+    <div id="stage">
+      <p><strong>문제 <span id="current-problem">1</span> / <span id="total-problems">5</span></strong></p>
+      <p><strong>DNA 서열:</strong> <span id="dna-seq"></span></p>
+
+      <label>RNA 서열 입력:</label>
+      <input type="text" id="rna-input" placeholder="예: AUGGCU...">
+
+      <button id="submit-btn" onclick="submitAnswer()">제출하기</button>
+      <div id="feedback"></div>
+      <button id="next-btn" onclick="loadNextProblem()" style="display:none;">다음 문제 ▶</button>
+    </div>
+
+    <div id="summary" style="display:none;">
+      <h2>게임 종료!</h2>
+      <p id="final-score"></p>
+      <button onclick="location.reload()">다시 하기</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
